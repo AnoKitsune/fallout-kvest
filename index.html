@@ -1,19 +1,17 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
     <title>Pip-Boy | Братство Стали</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="pipboy-container">
-        <!-- Основное окно диалога -->
+        <!-- ДИАЛОГОВОЕ ОКНО -->
         <div class="dialog-screen">
-            <div class="character-portrait">
-                <div id="portrait-placeholder">
-                    📟 <span id="char-name">СВЯЗЬ</span>
-                </div>
+            <div class="character-portrait" id="char-portrait">
+                <div class="portrait-placeholder" id="char-name">СВЯЗЬ</div>
             </div>
             <div class="dialog-box">
                 <div id="dialog-text" class="npc-text">
@@ -25,15 +23,15 @@
             </div>
         </div>
 
-        <!-- Кнопка открытия Пип-Боя -->
-        <button id="pipboy-btn" class="pipboy-button">📟 PİP-BOY 3000</button>
+        <!-- КНОПКА PIP‑BOY -->
+        <button id="pipboy-btn" class="pipboy-button">📟 PIP‑BOY 3000</button>
 
-        <!-- Модальное окно Пип-Боя -->
+        <!-- МЕНЮ PIP‑BOY (всплывающее) -->
         <div id="pipboy-modal" class="pipboy-modal hidden">
             <div class="pipboy-content">
                 <div class="pipboy-header">
                     <span class="close-pipboy">&times;</span>
-                    <h2>PIP-BOY 3000 Mk. IV</h2>
+                    <h2>PIP‑BOY 3000 Mk. IV</h2>
                     <div class="pipboy-stats">РЫЦАРЬ ИЛЬЯ | КРЫШЕК: <span id="caps-counter">0</span></div>
                 </div>
                 <div class="pipboy-tabs">
@@ -83,4 +81,4 @@
     </div>
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
