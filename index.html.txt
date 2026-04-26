@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Pip-Boy | Братство Стали</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="pipboy-container">
+        <!-- Основное окно диалога -->
+        <div class="dialog-screen">
+            <div class="character-portrait">
+                <div id="portrait-placeholder">
+                    📟 <span id="char-name">СВЯЗЬ</span>
+                </div>
+            </div>
+            <div class="dialog-box">
+                <div id="dialog-text" class="npc-text">
+                    Установка связи с терминалом Братства Стали...
+                </div>
+                <div id="response-buttons" class="response-options">
+                    <button class="response-btn" data-response="0">Подождать</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Кнопка открытия Пип-Боя -->
+        <button id="pipboy-btn" class="pipboy-button">📟 PİP-BOY 3000</button>
+
+        <!-- Модальное окно Пип-Боя -->
+        <div id="pipboy-modal" class="pipboy-modal hidden">
+            <div class="pipboy-content">
+                <div class="pipboy-header">
+                    <span class="close-pipboy">&times;</span>
+                    <h2>PIP-BOY 3000 Mk. IV</h2>
+                    <div class="pipboy-stats">РЫЦАРЬ ИЛЬЯ | КРЫШЕК: <span id="caps-counter">0</span></div>
+                </div>
+                <div class="pipboy-tabs">
+                    <button class="tablink active" data-tab="map">🗺️ КАРТА</button>
+                    <button class="tablink" data-tab="missions">📋 МИССИИ</button>
+                    <button class="tablink" data-tab="achievements">🏆 ДОСТИЖЕНИЯ</button>
+                </div>
+                <div id="map" class="tabcontent active">
+                    <div class="map-grid">
+                        <div class="map-location" data-loc="0">🚪 ЗОНА ВЫСАДКИ</div>
+                        <div class="map-location" data-loc="1">🍲 СКЛАД ПРИПАСОВ</div>
+                        <div class="map-location" data-loc="2">💊 МЕДИЦИНСКИЙ ОТСЕК</div>
+                        <div class="map-location" data-loc="3">⚔️ КАЗАРМА</div>
+                        <div class="map-location" data-loc="4">🐸 РАДИАЦИОННАЯ ЗОНА</div>
+                        <div class="map-location" data-loc="5">🏕️ ЛАГЕРЬ НКР</div>
+                        <div class="map-location" data-loc="6">🏛️ ШТАБ</div>
+                    </div>
+                </div>
+                <div id="missions" class="tabcontent">
+                    <ul id="missions-list">
+                        <li data-mission="0">⚪ ПРОЛОГ: Прибытие в штаб</li>
+                        <li data-mission="1">⚪ ФИЗПОДГОТОВКА: Норматив Братства</li>
+                        <li data-mission="2">⚪ СУХПАЁК: Восстановить силы</li>
+                        <li data-mission="3">⚪ СЕЙФ: Ультрафиолетовая истина</li>
+                        <li data-mission="4">⚪ ЧИСТЫЙ ЛИСТ: Ожидаемое предательство</li>
+                        <li data-mission="5">⚪ БОМБА: Разминирование века</li>
+                        <li data-mission="6">⚪ РАСКОПКИ: Археолог Пустоши</li>
+                        <li data-mission="7">⚪ МОНСТРЫ: Охотник на гулей</li>
+                        <li data-mission="8">⚪ ЛАГЕРЬ НКР: Судьба выживших</li>
+                        <li data-mission="9">⚪ МАКСИМУС: Свой среди чужих</li>
+                    </ul>
+                </div>
+                <div id="achievements" class="tabcontent">
+                    <ul id="achievements-list">
+                        <li data-ach="0">🔴 Сила Братства</li>
+                        <li data-ach="1">🔴 Вкус Пустоши</li>
+                        <li data-ach="2">🔴 Крышечный магнат</li>
+                        <li data-ach="3">🔴 Разминирование века</li>
+                        <li data-ach="4">🔴 Археолог Пустоши</li>
+                        <li data-ach="5">🔴 Охотник на гулей</li>
+                        <li data-ach="6">🔴 Миротворец / Железный кулак</li>
+                        <li data-ach="7">🔴 Прощение / Приказ есть приказ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
