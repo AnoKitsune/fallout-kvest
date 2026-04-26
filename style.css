@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #0a0f0a;
+    background: #0a0f0a;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,35 +15,35 @@ body {
 }
 
 .pipboy-container {
-    max-width: 800px;
+    max-width: 750px;
     width: 100%;
-    background: #1a2a1a;
-    border-radius: 24px;
-    padding: 16px;
-    box-shadow: 0 0 20px #2e6b2e;
-    border: 1px solid #3e8e3e;
+    background: #112211;
+    border-radius: 28px;
+    padding: 20px;
+    box-shadow: 0 0 20px #1e4a1e;
+    border: 1px solid #2e8b2e;
 }
 
 .dialog-screen {
     background: #0f1a0f;
-    border-radius: 20px;
+    border-radius: 24px;
     padding: 20px;
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     margin-bottom: 20px;
-    border: 1px solid #2a6b2a;
+    border: 1px solid #2e8b2e;
 }
 
 .character-portrait {
     flex: 1;
     min-width: 120px;
-    background: #00000088;
-    border-radius: 16px;
+    background: #00000099;
+    border-radius: 20px;
     padding: 20px;
     text-align: center;
-    color: #7ec87e;
-    border: 1px solid #3e8e3e;
+    color: #8aff8a;
+    border: 1px solid #3e9e3e;
     font-weight: bold;
     font-size: 1.2rem;
 }
@@ -56,12 +56,12 @@ body {
 .npc-text {
     background: #000000bb;
     padding: 16px;
-    border-radius: 16px;
-    color: #b0ffb0;
+    border-radius: 20px;
+    color: #c0ffc0;
     font-size: 1rem;
     line-height: 1.4;
     margin-bottom: 20px;
-    border-left: 6px solid #3e8e3e;
+    border-left: 6px solid #5eff5e;
 }
 
 .response-options {
@@ -72,7 +72,7 @@ body {
 
 .response-btn {
     background: #1f2a1f;
-    border: 1px solid #3e8e3e;
+    border: 1px solid #3e9e3e;
     color: #b0ffb0;
     font-family: 'Courier New', monospace;
     font-size: 1rem;
@@ -80,23 +80,23 @@ body {
     padding: 12px 16px;
     text-align: left;
     cursor: pointer;
+    border-radius: 14px;
     transition: 0.2s;
-    border-radius: 8px;
 }
 
 .response-btn:hover {
-    background: #2e4a2e;
-    border-color: #7ec87e;
-    box-shadow: 0 0 8px #3e8e3e;
+    background: #2e5a2e;
+    border-color: #8aff8a;
+    box-shadow: 0 0 8px #3e9e3e;
 }
 
 .pipboy-button {
     width: 100%;
     background: #1f2a1f;
-    border: 1px solid #3e8e3e;
+    border: 1px solid #3e9e3e;
     color: #b0ffb0;
     font-family: monospace;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
     padding: 12px;
     cursor: pointer;
@@ -106,8 +106,8 @@ body {
 }
 
 .pipboy-button:hover {
-    background: #2e4a2e;
-    box-shadow: 0 0 12px #3e8e3e;
+    background: #2e5a2e;
+    box-shadow: 0 0 12px #3e9e3e;
 }
 
 .pipboy-modal {
@@ -116,7 +116,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.85);
+    background: #000000dd;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,15 +129,15 @@ body {
 }
 
 .pipboy-content {
-    background: #112211;
+    background: #0e1f0e;
     width: 90%;
     max-width: 700px;
     max-height: 80vh;
-    border-radius: 24px;
-    border: 2px solid #3e8e3e;
+    border-radius: 28px;
+    border: 2px solid #3e9e3e;
     overflow-y: auto;
     padding: 20px;
-    color: #b0ffb0;
+    color: #c0ffc0;
     font-family: monospace;
 }
 
@@ -145,7 +145,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    border-bottom: 1px solid #3e8e3e;
+    border-bottom: 1px solid #3e9e3e;
     margin-bottom: 16px;
     flex-wrap: wrap;
 }
@@ -164,20 +164,20 @@ body {
 }
 
 .tablink {
-    background: #1a2a1a;
+    background: #1f2a1f;
     border: none;
-    color: #7ec87e;
-    padding: 8px 18px;
+    color: #8aff8a;
+    padding: 8px 20px;
     cursor: pointer;
     font-family: monospace;
     font-weight: bold;
-    border-radius: 20px;
+    border-radius: 30px;
 }
 
 .tablink.active {
     background: #2e6b2e;
     color: white;
-    box-shadow: 0 0 6px #7ec87e;
+    box-shadow: 0 0 8px #8aff8a;
 }
 
 .tabcontent {
@@ -196,10 +196,16 @@ body {
 
 .map-location {
     background: #000000aa;
-    padding: 10px;
-    border-radius: 12px;
-    border-left: 6px solid #3e8e3e;
+    padding: 12px;
+    border-radius: 16px;
+    border-left: 6px solid #3e9e3e;
     font-weight: bold;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+.map-location:active {
+    background: #2e5a2e;
 }
 
 #missions-list, #achievements-list {
@@ -209,6 +215,6 @@ body {
 
 li {
     margin-bottom: 12px;
-    border-bottom: 1px solid #2a5a2a;
+    border-bottom: 1px solid #2e6b2e;
     padding-bottom: 6px;
 }
